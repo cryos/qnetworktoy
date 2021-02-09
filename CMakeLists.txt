@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.1  FATAL_ERROR)
 project(qnetworktoy CXX)
 
 # Find Qt 5, turn on some conveniences
-find_package(Qt5 COMPONENTS Widgets Network)
+find_package(Qt5 REQUIRED COMPONENTS Widgets Network)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
