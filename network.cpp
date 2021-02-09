@@ -68,13 +68,6 @@ void Network::replyFinished(QNetworkReply *r)
             auto ptr = reinterpret_cast<const float*>(data.constData());
             m_data = QString(data);
     }
-    //auto ptr = reinterpret_cast<const float*>(data.constData());
-    //m_data = stringIt(ptr, data.size() / 4);
-    /**for (int i = 0; i < data.size() / 4; ++i) {
-        m_data.append(QString::number(ptr[i])).append("\t");
-        if ((i + 1) % 5 == 0)
-            m_data.append("\n");
-    }
-    m_data.chop(1); **/
+
     emit reply(m_data);
 }
